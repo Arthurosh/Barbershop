@@ -1,5 +1,354 @@
+:root {
+  /* colors */
+  --color-accent: #ff6c00;
+  --color-text-primary: #303030;
+  --color-text-secondary: #555555;
+  --color-text-light-dark: #9da4bd;
+  --color-text-light-dark-mix: rgba(157, 164, 189, 0.6);
+  --color-text-light: #ffffff;
+
+  /* background colors */
+  --color-bg-primary: #ffffff;
+  --color-bg-secondary: #f7f7f7;
+  --color-bg-dark: #191c26;
+
+  /* typography */
+  --font-stack: "Open Sans", sans-serif;
+  /* --font-size: 18px;
+  --line-height: 1.55; */
+
+  /* Transitions */
+  --transition-duration: 250ms;
+  --transition-animation: cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* General CSS settings */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
 body {
-  background-color: #fff;
+  font-family: var(--font-stack);
+  font-style: normal;
+  margin: 0;
+  /* font-size: $font-size; */
+  /* line-height: $line-height; */
+  color: var(--color-text-primary);
+  /* background-color: $color-bg-lightest; */
+}
+
+.container {
+  width: 1280px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+
+  border: 1px solid tomato;
+
+  /* @media screen and (max-width: 479px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 480px) {
+    width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 1200px;
+  } */
+}
+
+/* Fonts text */
+.title {
+  font-family: "Raleway", sans-serif;
+  font-size: 42px;
+  line-height: calc(49 / 42);
+  letter-spacing: 0.05em;
+}
+.sub-title {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.text {
+  font-size: 18px;
+  line-height: calc(30 / 18);
+  letter-spacing: 0.02em;
+}
+.sub-text {
+  font-size: 14px;
+  line-height: calc(26 / 14);
+  letter-spacing: 0.02em;
 }
 
 /* Header */
+.header {
+  background-color: gray;
+}
+
+/* .header__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* .site-nav__list {
+  display: flex;
+  align-items: center;
+} */
+
+.site-nav__link,
+.header__contacts {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.1em;
+
+  color: var(--color-text-light);
+  transition: color var(--transition-duration) var(--transition-animation);
+}
+
+.site-nav__link:hover,
+.site-nav__link:focus,
+.header__contacts:hover,
+.header__contacts:focus {
+  color: var(--color-accent);
+}
+
+/* Button*/
+.button {
+  padding: 12px 25px;
+  min-width: 160px;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: calc(16 / 12);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+
+  border: 1px solid var(--color-accent);
+  border-radius: 25px;
+
+  transition: background-color var(--transition-duration)
+      var(--transition-animation),
+    color var(--transition-duration) var(--transition-animation);
+}
+.button:hover,
+.button:focus {
+  background-color: var(--color-accent);
+}
+.header__button {
+  color: var(--color-text-light);
+}
+.about__button:hover,
+.about__button:focus,
+.price__button:hover,
+.price__button:focus {
+  color: var(--color-text-light);
+  background-color: var(--color-accent);
+}
+
+/* Hero */
+.hero {
+  background-color: var(--color-bg-dark);
+}
+.social__link {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+
+  color: var(--color-text-primary);
+  transition: color var(--transition-duration) var(--transition-animation);
+}
+.social__link:hover,
+.social__link:focus {
+  color: var(--color-accent);
+}
+
+.hero__sub-title {
+  color: var(--color-text-light-dark-mix);
+}
+.hero__title {
+  font-family: "Raleway", sans-serif;
+  font-size: 72px;
+  line-height: 85px;
+  letter-spacing: 0.05em;
+
+  color: var(--color-text-light);
+}
+.hero__text {
+  color: var(--color-text-light-dark);
+}
+
+/* About */
+.about__sub-title {
+  color: var(--color-text-primary);
+}
+.about__title {
+  color: var(--color-text-primary);
+}
+.about__text {
+  color: var(--color-text-secondary);
+}
+.about__sub-text {
+  color: var(--color-text-secondary);
+}
+
+/* Price */
+.price {
+  background-color: var(--color-bg-dark);
+}
+.price__sub-title {
+  color: var(--color-text-light-dark-mix);
+}
+.price__title {
+  color: var(--color-text-light);
+}
+.price__text {
+  color: var(--color-text-light-dark);
+}
+
+/* Benefits */
+.benefits__count {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: calc(57 / 42);
+  text-align: center;
+  letter-spacing: 0.05em;
+
+  color: var(--color-text-primary);
+}
+.benefits__sub-text {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  text-align: center;
+
+  color: var(--color-text-primary);
+}
+.benefits__sub-title {
+  color: var(--color-text-primary);
+}
+.benefits__title {
+  color: var(--color-text-primary);
+}
+.benefits__text {
+  color: var(--color-text-secondary);
+}
+
+/* Team */
+.team__sub-title {
+  color: var(--color-text-primary);
+}
+.team__title {
+  color: var(--color-text-primary);
+}
+.team__name {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: calc(25 / 18);
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--color-text-primary);
+}
+.team__position {
+  font-size: 14px;
+  line-height: calc(19 / 14);
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: var(--color-accent);
+}
+
+/* Galery */
+.galery__sub-title {
+  color: var(--color-text-primary);
+}
+
+/* Online */
+.online {
+  background-color: var(--color-bg-dark);
+}
+
+/* Subscribe */
+.subscribe__title {
+  color: var(--color-text-light);
+}
+/* Address */
+
+.address__title {
+  color: var(--color-text-light);
+}
+.address-contacts {
+  font-style: normal;
+}
+.address-contacts__link {
+  color: var(--color-text-light-dark);
+}
+
+.work-time__sub-title {
+  color: var(--color-text-light);
+}
+.work-time__text {
+  color: var(--color-text-light-dark);
+}
+
+/* Footer */
+.footer_copy {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: calc(15 / 11);
+  letter-spacing: 0.2em;
+
+  color: var(--color-text-light-dark);
+}
