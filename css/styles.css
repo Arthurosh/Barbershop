@@ -20,7 +20,10 @@
   /* Transitions */
   --transition-duration: 250ms;
   --transition-animation: cubic-bezier(0.4, 0, 0.2, 1);
+  /* Distance */
+  --typical-margin: 20px;
 }
+
 /* General CSS settings */
 p,
 h1,
@@ -37,10 +40,6 @@ ol {
   margin: 0;
   padding-left: 0;
   list-style: none;
-}
-
-button {
-  cursor: pointer;
 }
 
 img {
@@ -77,13 +76,12 @@ body {
 }
 
 .container {
-  width: 1280px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
-  margin-left: auto;
-  margin-right: auto;
+  margin-left: 0 auto;
 
-  border: 1px solid tomato;
+  outline: 1px solid tomato;
 
   /* @media screen and (max-width: 479px) {
     max-width: 480px;
@@ -129,12 +127,13 @@ body {
 
 /* Header */
 .header {
+  margin-top: 32px;
+  margin-bottom: 32px;
   background-color: gray;
 }
 
 /* .header__container {
   display: flex;
-  justify-content: center;
   align-items: center;
 } */
 
@@ -145,6 +144,8 @@ body {
 
 .site-nav__link,
 .header__contacts {
+  padding-top: 48px;
+
   font-weight: 600;
   font-size: 12px;
   line-height: calc(16 / 12);
@@ -197,9 +198,12 @@ body {
 }
 
 /* Hero */
-.hero {
+
+.hero__content {
   background-color: var(--color-bg-dark);
+  padding: 272px 96px 206px 96px;
 }
+
 .social__link {
   font-weight: 600;
   font-size: 11px;
@@ -215,9 +219,12 @@ body {
 }
 
 .hero__sub-title {
+  margin-bottom: var(--typical-margin);
   color: var(--color-text-light-dark-mix);
 }
 .hero__title {
+  margin-bottom: var(--typical-margin);
+
   font-family: "Raleway", sans-serif;
   font-size: 72px;
   line-height: 85px;
@@ -226,35 +233,67 @@ body {
   color: var(--color-text-light);
 }
 .hero__text {
+  max-width: 400px;
   color: var(--color-text-light-dark);
 }
 
 /* About */
+.about {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
 .about__sub-title {
+  margin-bottom: var(--typical-margin);
   color: var(--color-text-primary);
 }
 .about__title {
+  margin-bottom: var(--typical-margin);
   color: var(--color-text-primary);
 }
 .about__text {
+  margin-bottom: var(--typical-margin);
   color: var(--color-text-secondary);
 }
 .about__sub-text {
+  margin-bottom: 40px;
   color: var(--color-text-secondary);
 }
 
 /* Price */
 .price {
+  padding-top: 130px;
+  padding-bottom: 130px;
   background-color: var(--color-bg-dark);
 }
+
 .price__sub-title {
+  margin-bottom: var(--typical-margin);
   color: var(--color-text-light-dark-mix);
 }
+
 .price__title {
+  margin-bottom: 45px;
   color: var(--color-text-light);
 }
+
+.price__list {
+  border: 1px dashed white;
+
+  padding: 30px 40px;
+  margin-bottom: 50px;
+}
+
+.price__item:not(:last-child) {
+  margin-bottom: var(--typical-margin);
+}
+
 .price__text {
   color: var(--color-text-light-dark);
+}
+
+.price__button {
+  display: block;
+  margin: 0 auto;
 }
 
 /* Benefits */
