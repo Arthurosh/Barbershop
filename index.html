@@ -18,13 +18,20 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!-- Підключення анімацій -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Підключення файлу стилів сайту -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="header">
       <!-- Header -->
       <div class="container header__container">
-        <a href="" class="header__logo">
+        <a href="" class="header__logo animate__animated animate__bounce">
           <svg class="logo__icon" width="66px" height="55px">
             <use href="./images/icons.svg/symbol-defs.svg#icon-logo"></use>
           </svg>
@@ -51,7 +58,7 @@
         <a class="header__contacts" href="tel:+380441111111"
           >+38 044 111 11 11</a
         >
-        <button type="button" class="button header__button">
+        <button type="button" class="button header__button" data-modal-open>
           онлайн-запис
         </button>
       </div>
@@ -85,7 +92,11 @@
           </div>
 
           <div class="hero__content">
-            <p lang="en" class="hero__sub-title sub-title">
+            <p
+              lang="en"
+              class="hero__sub-title sub-title"
+              data-aos="fade-right"
+            >
               A hair salon for men in Kyiv
             </p>
             <h1 lang="en" class="hero__title">BarberShop</h1>
@@ -123,7 +134,9 @@
             </li>
           </ul>
           <div class="about__content">
-            <p class="about__sub-title sub-title">ПРО НАС</p>
+            <p class="about__sub-title sub-title" data-aos="flip-left">
+              ПРО НАС
+            </p>
             <h2 class="about__title title">Кращий Барбершоп твого міста</h2>
             <p class="about__text text">
               Якщо ти хочеш додати до свого образу більше впевненості – тобі
@@ -146,7 +159,11 @@
       <!-- Price -->
       <section class="price" id="price">
         <div class="container">
-          <p class="price__sub-title sub-title">
+          <p
+            class="price__sub-title sub-title"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
             Проведи час в компанії кращих майстрів
           </p>
           <h2 class="price__title title">Послуги та ціни</h2>
@@ -216,7 +233,9 @@
             </li>
           </ul>
           <div class="benefits__content">
-            <p class="benefits__sub-title sub-title">стара традиційна школа</p>
+            <p class="benefits__sub-title sub-title" data-aos="zoom-out-up">
+              стара традиційна школа
+            </p>
             <h2 class="benefits__title title">Чому приходять саме до нас?</h2>
             <p class="benefits__text text">
               Про нас говорять лише хороше. Але краще 1 раз побачити та відчути,
@@ -229,211 +248,225 @@
       <!-- Team -->
       <section class="team" id="team">
         <div class="container">
-          <p class="team__sub-title sub-title">
+          <p
+            class="team__sub-title sub-title"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
             для справжніх поціновувачів атмосфери
           </p>
           <h2 class="team__title title">Наші майстри</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                src="./images/team/img-1.jpeg"
-                width="370"
-                alt="барбер робить стрижку"
-              />
+              <div class="team__thumb">
+                <img
+                  src="./images/team/img-1.jpeg"
+                  width="370"
+                  alt="барбер робить стрижку"
+                />
+                <ul class="team-network__list">
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.twitter.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://facebook.com/"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
               <h3 lang="en" class="team__name">John Smith</h3>
               <p lang="en" class="team__position">Extreme Barber</p>
-              <ul class="team-network__list">
-                <li class="team-network__item">
-                  <a
-                    href="https://www.instagram.com"
-                    target="_blank"
-                    rel="noopener nofollow noreferrer"
-                    class="team-network__link"
-                  >
-                    <svg class="team-network__icon" width="20" height="20">
-                      <use
-                        href="./images/icons.svg/symbol-defs.svg#icon-instagram"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="team-network__item">
-                  <a
-                    href="https://www.twitter.com"
-                    target="_blank"
-                    rel="noopener nofollow noreferrer"
-                    class="team-network__link"
-                  >
-                    <svg class="team-network__icon" width="20" height="20">
-                      <use
-                        href="./images/icons.svg/symbol-defs.svg#icon-twitter"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="team-network__item">
-                  <a
-                    href="https://facebook.com/"
-                    target="_blank"
-                    rel="noopener nofollow noreferrer"
-                    class="team-network__link"
-                  >
-                    <svg class="team-network__icon" width="20" height="20">
-                      <use
-                        href="./images/icons.svg/symbol-defs.svg#icon-facebook"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="team-network__item">
-                  <a
-                    href="https://www.linkedin.com"
-                    target="_blank"
-                    rel="noopener nofollow noreferrer"
-                    class="team-network__link"
-                  >
-                    <svg class="team-network__icon" width="20" height="20">
-                      <use
-                        href="./images/icons.svg/symbol-defs.svg#icon-linkedin"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
             </li>
             <li class="team__item">
-              <img
-                src="./images/team/img-2.jpeg"
-                width="370"
-                alt="барбер робить стрижку"
-              />
+              <div class="team__thumb">
+                <img
+                  src="./images/team/img-2.jpeg"
+                  width="370"
+                  alt="барбер робить стрижку"
+                />
+                <ul class="team-network__list">
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.twitter.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://facebook.com/"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
               <h3 lang="en" class="team__name">Michele Doe</h3>
               <p lang="en" class="team__position">Extreme Barber</p>
-              <ul class="team-network__list">
-                <li class="team-network__item">
-                  <a
-                    href="https://www.instagram.com"
-                    target="_blank"
-                    rel="noopener nofollow noreferrer"
-                    class="team-network__link"
-                  >
-                    <svg class="team-network__icon" width="20" height="20">
-                      <use
-                        href="./images/icons.svg/symbol-defs.svg#icon-instagram"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="team-network__item">
-                  <a
-                    href="https://www.twitter.com"
-                    target="_blank"
-                    rel="noopener nofollow noreferrer"
-                    class="team-network__link"
-                  >
-                    <svg class="team-network__icon" width="20" height="20">
-                      <use
-                        href="./images/icons.svg/symbol-defs.svg#icon-twitter"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="team-network__item">
-                  <a
-                    href="https://facebook.com/"
-                    target="_blank"
-                    rel="noopener nofollow noreferrer"
-                    class="team-network__link"
-                  >
-                    <svg class="team-network__icon" width="20" height="20">
-                      <use
-                        href="./images/icons.svg/symbol-defs.svg#icon-facebook"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="team-network__item">
-                  <a
-                    href="https://www.linkedin.com"
-                    target="_blank"
-                    rel="noopener nofollow noreferrer"
-                    class="team-network__link"
-                  >
-                    <svg class="team-network__icon" width="20" height="20">
-                      <use
-                        href="./images/icons.svg/symbol-defs.svg#icon-linkedin"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
             </li>
             <li class="team__item">
-              <img
-                src="./images/team/img-3.jpeg"
-                width="370"
-                alt="барбер робить стрижку"
-              />
+              <div class="team__thumb">
+                <img
+                  src="./images/team/img-3.jpeg"
+                  width="370"
+                  alt="барбер робить стрижку"
+                />
+                <ul class="team-network__list">
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.twitter.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://facebook.com/"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
               <h3 lang="en" class="team__name">Alan Black</h3>
               <p lang="en" class="team__position">Extreme Barber</p>
-              <ul class="team-network__list">
-                <li class="team-network__item">
-                  <a
-                    href="https://www.instagram.com"
-                    target="_blank"
-                    rel="noopener nofollow noreferrer"
-                    class="team-network__link"
-                  >
-                    <svg class="team-network__icon" width="20" height="20">
-                      <use
-                        href="./images/icons.svg/symbol-defs.svg#icon-instagram"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="team-network__item">
-                  <a
-                    href="https://www.twitter.com"
-                    target="_blank"
-                    rel="noopener nofollow noreferrer"
-                    class="team-network__link"
-                  >
-                    <svg class="team-network__icon" width="20" height="20">
-                      <use
-                        href="./images/icons.svg/symbol-defs.svg#icon-twitter"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="team-network__item">
-                  <a
-                    href="https://facebook.com/"
-                    target="_blank"
-                    rel="noopener nofollow noreferrer"
-                    class="team-network__link"
-                  >
-                    <svg class="team-network__icon" width="20" height="20">
-                      <use
-                        href="./images/icons.svg/symbol-defs.svg#icon-facebook"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-                <li class="team-network__item">
-                  <a
-                    href="https://www.linkedin.com"
-                    target="_blank"
-                    rel="noopener nofollow noreferrer"
-                    class="team-network__link"
-                  >
-                    <svg class="team-network__icon" width="20" height="20">
-                      <use
-                        href="./images/icons.svg/symbol-defs.svg#icon-linkedin"
-                      ></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
             </li>
           </ul>
         </div>
@@ -441,7 +474,11 @@
       <!-- Galery -->
       <section class="gallery">
         <div class="container">
-          <p class="gallery__sub-title sub-title">
+          <p
+            class="gallery__sub-title sub-title"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-center"
+          >
             Латинською мовою "барба" означає "борода"
           </p>
           <h2 class="gallery__title title visually-hidden">Галерея</h2>
@@ -532,7 +569,9 @@
               </ul>
             </address>
             <div class="work-time">
-              <p class="work-time__sub-title sub-title">ГРАФІК РОБОТИ</p>
+              <p class="work-time__sub-title sub-title" data-aos="zoom-in-down">
+                ГРАФІК РОБОТИ
+              </p>
               <p class="work-time__text text">Щоденно з 9:00 до 22:00</p>
             </div>
           </div>
@@ -567,5 +606,73 @@
         </div>
       </div>
     </footer>
+    <!-- Backdrop -->
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-button-close" data-modal-close>
+          <svg width="18px" height="18px">
+            <use
+              href="./images/icons.svg/symbol-defs.svg#icon-modal-close"
+            ></use>
+          </svg>
+        </button>
+        <p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modall__form">
+          <label class="modal__label"
+            >Ім'я
+            <input
+              required
+              type="text"
+              name="use-name"
+              class="modal__input"
+              placeholder="Іван Іванов"
+              minlength="2"
+            />
+          </label>
+          <label class="modal__label"
+            >Телефон
+            <input
+              required
+              type="tel"
+              name="use-tel"
+              class="modal__input"
+              placeholder="+38(044)000-00-00"
+              pattern="[\+]\d{2}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}"
+              title="+38(044)000-00-00"
+            />
+          </label>
+          <div class="modal__field">
+            <label for="use-email" class="modal__label">Пошта</label>
+            <input
+              required
+              type="tel"
+              name="use-email"
+              class="modal__input"
+              placeholder="ivanivanov@gmail.com"
+              id="use-email"
+            />
+          </div>
+          <div class="modal__field">
+            <label for="user-text" class="modal__label">Ваш коментр</label>
+             <textarea
+              name="user-text"
+              id="user-text"
+              placeholder="Введіть текст"
+              class="modal__text"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="button modul__button">Відправити</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Скрипт Анімацій -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Запуск Скрипт Анімацій -->
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
