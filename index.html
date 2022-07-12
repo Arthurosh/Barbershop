@@ -11,17 +11,31 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Підключення анімацій -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <!-- Підключення файлу стилів сайту -->
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
     <header class="header">
       <!-- Header -->
       <div class="container header__container">
-        <a href="" class="header__logo">
-          <!-- <svg class="logo__icon" width="66px" height="55px">
-            <use href="./images/symbol-defs.svg#icon-logo"></use>
-          </svg> -->
-          <img src="./images/logo.svg" alt="логотип сайту" />
+        <a href="" class="header__logo animate__animated animate__bounce">
+          <svg class="logo__icon" width="66px" height="55px">
+            <use href="./images/icons.svg/symbol-defs.svg#icon-logo"></use>
+          </svg>
+          <!-- <img src="./images/logo.svg" alt="логотип сайту" /> -->
         </a>
 
         <nav class="site-nav">
@@ -41,8 +55,10 @@
           </ul>
         </nav>
 
-        <a class="header__contacts" href="tel:+380441111111">+38 044 111 11 11</a>
-        <button type="button" class="button header__button">
+        <a class="header__contacts" href="tel:+380441111111"
+          >+38 044 111 11 11</a
+        >
+        <button type="button" class="button header__button" data-modal-open>
           онлайн-запис
         </button>
       </div>
@@ -51,32 +67,36 @@
     <main>
       <!-- Hero -->
       <section class="hero">
-        <div class="container">
-          <div class="hero__social">
-            <ul class="social__list">
-              <li class="social__item">
+        <div class="container hero__container">
+          <div class="hero-social">
+            <ul class="hero-social__list">
+              <li class="hero-social__item">
                 <a
                   href="https://www.instagram.com"
                   target="_blank"
                   rel="noopener nofollow noreferrer"
-                  class="social__link"
+                  class="hero-social__link social__link"
                   >Instagram</a
                 >
               </li>
-              <li class="social__item">
+              <li class="hero-social__item">
                 <a
                   href="https://www.youtube.com"
                   target="_blank"
                   rel="noopener nofollow noreferrer"
-                  class="social__link"
+                  class="hero-social__link social__link"
                   >Youtube</a
                 >
               </li>
             </ul>
           </div>
 
-          <div>
-            <p lang="en" class="hero__sub-title sub-title">
+          <div class="hero__content">
+            <p
+              lang="en"
+              class="hero__sub-title sub-title"
+              data-aos="fade-right"
+            >
               A hair salon for men in Kyiv
             </p>
             <h1 lang="en" class="hero__title">BarberShop</h1>
@@ -94,257 +114,565 @@
 
       <!-- About -->
       <section class="about" id="about">
-        <div class="container">
-            <ul class="about__list">
+        <div class="container about__container">
+          <ul class="about__list">
             <li class="about__item">
-                <img
-                src="./images/about/img-1.jpg"
+              <img
+                src="./images/about/img-1.jpeg"
                 width="270"
+                height="427"
                 alt="барбер підстригає бороду"
-                />
+              />
             </li>
             <li class="about__item">
-                <img
-                src="./images/about/img-2.jpg"
+              <img
+                src="./images/about/img-2.jpeg"
                 width="270"
+                height="427"
                 alt="барбер підстригає бороду"
-                />
+              />
             </li>
-            </ul>
-            <p class="about__sub-title sub-title">ПРО НАС</p>
-            <h2 class="about__title title ">Кращий Барбершоп твого міста</h2>
+          </ul>
+          <div class="about__content">
+            <p class="about__sub-title sub-title" data-aos="flip-left">
+              ПРО НАС
+            </p>
+            <h2 class="about__title title">Кращий Барбершоп твого міста</h2>
             <p class="about__text text">
-            Якщо ти хочеш додати до свого образу більше впевненості – тобі точно
-            до нас.
+              Якщо ти хочеш додати до свого образу більше впевненості – тобі
+              точно до нас.
             </p>
             <p class="about__sub-text sub-text">
-            Ми команда, яка ніколи не зупиняється на досягнутому та прагне змін. І
-            коли ти потрапиш до рук нашого майстра, то вже ніколи не зможеш бути
-            колишнім. Ми команда, яка завжди з клієнтами "на одній хвилі". Тому,
-            ми завжди готові вдосконалювати кожного, хто до нас приходить!
+              Ми команда, яка ніколи не зупиняється на досягнутому та прагне
+              змін. І коли ти потрапиш до рук нашого майстра, то вже ніколи не
+              зможеш бути колишнім. Ми команда, яка завжди з клієнтами "на одній
+              хвилі". Тому, ми завжди готові вдосконалювати кожного, хто до нас
+              приходить!
             </p>
-            <button type="button" class="button about__button">онлайн-запис</button>
+            <button type="button" class="button about__button">
+              онлайн-запис
+            </button>
+          </div>
         </div>
-
       </section>
 
       <!-- Price -->
       <section class="price" id="price">
         <div class="container">
-        <p class="price__sub-title sub-title">Проведи час в компанії кращих майстрів</p>
-        <h2 class="price__title title ">Послуги та ціни</h2>
-        <ul class="price__list">
-          <li class="price__item">
-            <p class="price__text text">Чоловіча стрижка</p>
-            <p class="price__text text">від 300 грн.</p>
-          </li>
-          <li>
-            <p class="price__text text">Стрижка бороди</p>
-            <p class="price__text text">від 200 грн.</p>
-          </li>
-          <li>
-            <p class="price__text text">Стрижка вусів</p>
-            <p class="price__text text">від 200 грн.</p>
-          </li>
-          <li>
-            <p class="price__text text">Гоління небезпечною бритвою</p>
-            <p class="price__text text">від 200 грн.</p>
-          </li>
-        </ul>
-        <ul class="price__list">
-          <li class="price__item">
-            <p class="price__text text">Стрижка у стажера</p>
-            <p class="price__text text">від 50 грн.</p>
-          </li>
-          <li>
-            <p class="price__text text">Стрижка під насадку</p>
-            <p class="price__text text">від 200 грн.</p>
-          </li>
-          <li>
-            <p class="price__text text">Дитяча стрижка (до 12 років)</p>
-            <p class="price__text text">від 300 грн.</p>
-          </li>
-          <li>
-            <p class="price__text text">Камуфлювання сивини</p>
-            <p class="price__text text">від 200 грн.</p>
-          </li>
-        </ul>
-        <button type="button" class="button price__button">онлайн-запис</button>
+          <p
+            class="price__sub-title sub-title"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+          >
+            Проведи час в компанії кращих майстрів
+          </p>
+          <h2 class="price__title title">Послуги та ціни</h2>
+          <div class="price__wrap">
+            <ul class="price__list price__list-light">
+              <li class="price__item">
+                <p class="price__text text">Чоловіча стрижка</p>
+                <p class="price__text text">від 300 грн.</p>
+              </li>
+              <li class="price__item">
+                <p class="price__text text">Стрижка бороди</p>
+                <p class="price__text text">від 200 грн.</p>
+              </li>
+              <li class="price__item">
+                <p class="price__text text">Стрижка вусів</p>
+                <p class="price__text text">від 200 грн.</p>
+              </li>
+              <li class="price__item">
+                <p class="price__text text">Гоління небезпечною бритвою</p>
+                <p class="price__text text">від 200 грн.</p>
+              </li>
+            </ul>
+            <ul class="price__list price__list-darck">
+              <li class="price__item">
+                <p class="price__text text">Стрижка у стажера</p>
+                <p class="price__text text">від 50 грн.</p>
+              </li>
+              <li class="price__item">
+                <p class="price__text text">Стрижка під насадку</p>
+                <p class="price__text text">від 200 грн.</p>
+              </li>
+              <li class="price__item">
+                <p class="price__text text">Дитяча стрижка (до 12 років)</p>
+                <p class="price__text text">від 300 грн.</p>
+              </li>
+              <li class="price__item">
+                <p class="price__text text">Камуфлювання сивини</p>
+                <p class="price__text text">від 200 грн.</p>
+              </li>
+            </ul>
+          </div>
+          <button type="button" class="button price__button">
+            онлайн-запис
+          </button>
         </div>
       </section>
 
       <!-- Benefits -->
       <section class="benefits">
-        <div class="container">
-            <ul class="benefits__list">
+        <div class="container benefits__container">
+          <ul class="benefits__list">
             <li class="benefits__item">
-                <span class="benefits__count">600</span>
-                <p class="benefits__sub-text">Задоволених клієнтів на день</p>
+              <span class="benefits__count">600</span>
+              <p class="benefits__sub-text">Задоволених клієнтів на день</p>
             </li>
-            <li>
-                <span class="benefits__item">
-                <span class="benefits__count">50</span>
-                <p class="benefits__sub-text">Нагород за відмінний сервіс</p>
+            <li class="benefits__item">
+              <span class="benefits__count">50</span>
+              <p class="benefits__sub-text">Нагород за відмінний сервіс</p>
             </li>
-            <li>
-                <span class="benefits__item">
-                <span class="benefits__count">20</span>
-                <p class="benefits__sub-text">Найкращих майстрів Києва</p>
+            <li class="benefits__item">
+              <span class="benefits__count">20</span>
+              <p class="benefits__sub-text">Найкращих майстрів Києва</p>
             </li>
-            <li>
-                <span class="benefits__item">
-                <span class="benefits__count">100</span>
-                <p class="benefits__sub-text">Подарунків постійним клієнтам</p>
+            <li class="benefits__item">
+              <span class="benefits__count">100</span>
+              <p class="benefits__sub-text">Подарунків постійним клієнтам</p>
             </li>
-            </ul>
-            <p class="benefits__sub-title sub-title">стара традиційна школа</p>
-            <h2 class="benefits__title title ">Чому приходять саме до нас?</h2>
-            <p class="benefits__text text">
-            Про нас говорять лише хороше. Але краще 1 раз побачити та відчути, ніж
-            10 разів прочитати.
+          </ul>
+          <div class="benefits__content">
+            <p class="benefits__sub-title sub-title" data-aos="zoom-out-up">
+              стара традиційна школа
             </p>
+            <h2 class="benefits__title title">Чому приходять саме до нас?</h2>
+            <p class="benefits__text text">
+              Про нас говорять лише хороше. Але краще 1 раз побачити та відчути,
+              ніж 10 разів прочитати.
+            </p>
+          </div>
         </div>
       </section>
 
       <!-- Team -->
       <section class="team" id="team">
-            <div class="container">
-            <p class="team__sub-title sub-title">для справжніх поціновувачів атмосфери</p>
-            <h2 class="team__title title ">Наші майстри</h2>
-            <ul class="team__list">
+        <div class="container">
+          <p
+            class="team__sub-title sub-title"
+            data-aos="flip-left"
+            data-aos-easing="ease-out-cubic"
+            data-aos-duration="2000"
+          >
+            для справжніх поціновувачів атмосфери
+          </p>
+          <h2 class="team__title title">Наші майстри</h2>
+          <ul class="team__list">
             <li class="team__item">
+              <div class="team__thumb">
                 <img
-                src="./images/team/img1.jpg"
-                width="370"
-                alt="барбер робить стрижку"
+                  src="./images/team/img-1.jpeg"
+                  width="370"
+                  alt="барбер робить стрижку"
                 />
-                <h3 lang="en" class="team__name">John Smith</h3>
-                <p lang="en" class="team__position">Extreme Barber</p>
+                <ul class="team-network__list">
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.twitter.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://facebook.com/"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <h3 lang="en" class="team__name">John Smith</h3>
+              <p lang="en" class="team__position">Extreme Barber</p>
             </li>
             <li class="team__item">
+              <div class="team__thumb">
                 <img
-                src="./images/team/img2.jpg"
-                width="370"
-                alt="барбер робить стрижку"
+                  src="./images/team/img-2.jpeg"
+                  width="370"
+                  alt="барбер робить стрижку"
                 />
-                <h3 lang="en" class="team__name">Michele Doe</h3>
-                <p lang="en" class="team__position">Extreme Barber</p>
+                <ul class="team-network__list">
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.twitter.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://facebook.com/"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <h3 lang="en" class="team__name">Michele Doe</h3>
+              <p lang="en" class="team__position">Extreme Barber</p>
             </li>
             <li class="team__item">
+              <div class="team__thumb">
                 <img
-                src="./images/team/img3.jpg"
-                width="370"
-                alt="барбер робить стрижку"
+                  src="./images/team/img-3.jpeg"
+                  width="370"
+                  alt="барбер робить стрижку"
                 />
-                <h3 lang="en" class="team__name">Alan Black</h3>
-                <p lang="en" class="team__position">Extreme Barber</p>
+                <ul class="team-network__list">
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-instagram"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.twitter.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-twitter"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://facebook.com/"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-facebook"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="team-network__item">
+                    <a
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener nofollow noreferrer"
+                      class="team-network__link"
+                    >
+                      <svg class="team-network__icon" width="20" height="20">
+                        <use
+                          href="./images/icons.svg/symbol-defs.svg#icon-linkedin"
+                        ></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <h3 lang="en" class="team__name">Alan Black</h3>
+              <p lang="en" class="team__position">Extreme Barber</p>
             </li>
-            </ul>
+          </ul>
         </div>
- 
       </section>
       <!-- Galery -->
-      <section class="galery">
+      <section class="gallery">
         <div class="container">
-            <p class="galery__sub-title sub-title">Латинською мовою "барба" означає "борода"</p>
-            <h2 class="galery__title title visually-hidden">Галерея</h2>
-            <ul class="galery__list">
-            <li class="galery__item">
-                <img
-                src="./images/galery/Rectangle-1.jpg"
+          <p
+            class="gallery__sub-title sub-title"
+            data-aos="fade-up"
+            data-aos-anchor-placement="center-center"
+          >
+            Латинською мовою "барба" означає "борода"
+          </p>
+          <h2 class="gallery__title title visually-hidden">Галерея</h2>
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <img
+                src="./images/galery/img-1.jpeg"
                 width="270"
                 alt="барбер робить стрижку"
-                />
+              />
             </li>
-            <li class="galery__item">
-                <img
-                src="./images/galery/Rectangle-2.jpg"
+            <li class="gallery__item">
+              <img
+                src="./images/galery/img-2.jpeg"
                 width="270"
                 alt="барбер робить стрижку"
-                />
+              />
             </li>
-            <li class="galery__item">
-                <img
-                src="./images/galery/Rectangle-3.jpg"
+            <li class="gallery__item">
+              <img
+                src="./images/galery/img-3.jpeg"
                 width="270"
                 alt="барбер робить стрижку"
-                />
+              />
             </li>
-            <li class="galery__item">
-                <img
-                src="./images/galery/Rectangle-4.jpg"
+            <li class="gallery__item">
+              <img
+                src="./images/galery/img-4.jpeg"
                 width="270"
                 alt="барбер робить стрижку"
-                />
+              />
             </li>
-            </ul>
+          </ul>
         </div>
       </section>
-        <!-- Online -->
+      <!-- Online -->
       <section class="online">
-        <div class="container">
-            <div class="subscribe">
+        <div class="container online__container">
+          <div class="subscribe">
             <h2 class="subscribe__title title">Онлайн-запис</h2>
-            </div>
-            <div class="address" id="address">
-                <h2 class="address__title title">Контакти</h2>
-                <address class="address-contacts">
-                    <ul class="address-contacts__list">
-                        <li class="address-contacts__item">
-                        <a class="address-contacts__link text"
-                            href="https://goo.gl/maps/dbYuJji8FbpRPxHN6"
-                            target="_blank"
-                            rel="noopener noreferrer nofollow"
-                        >
-                            вул. Василькова, 7А <br />
-                            Київ, 08132</a
-                        >
-                        </li>
-                        <li class="address-contacts__item">
-                            <a class="address-contacts__link text"
-                            href="tel:+380441111111">+38 044 111 11 11</a>
-                        </li>
-                        <li class="address-contacts__item">
-                            <a class="address-contacts__link text"
-                            href="mailto:barbershop@email.com">barbershop@email.com</a>
-                        </li>
-                    </ul>
-                </address>
-            </div>
+          </div>
+          <div class="address" id="address">
+            <h2 class="address__title title">Контакти</h2>
+            <address class="address-contacts">
+              <ul class="address-contacts__list">
+                <li class="address-contacts__item">
+                  <a
+                    class="address-contacts__link text"
+                    href="https://goo.gl/maps/dbYuJji8FbpRPxHN6"
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                  >
+                    <svg class="address-contacts__icon" width="24" height="24">
+                      <use
+                        href="./images/icons.svg/symbol-defs.svg#icon-map"
+                      ></use>
+                    </svg>
+                    вул. Василькова, 7А <br />
+                    Київ, 08132</a
+                  >
+                </li>
+                <li class="address-contacts__item">
+                  <a
+                    class="address-contacts__link text"
+                    href="tel:+380441111111"
+                  >
+                    <svg class="address-contacts__icon" width="24" height="24">
+                      <use
+                        href="./images/icons.svg/symbol-defs.svg#icon-phone"
+                      ></use>
+                    </svg>
+                    +38 044 111 11 11</a
+                  >
+                </li>
+                <li class="address-contacts__item">
+                  <a
+                    class="address-contacts__link text"
+                    href="mailto:barbershop@email.com"
+                  >
+                    <svg class="address-contacts__icon" width="24" height="24">
+                      <use
+                        href="./images/icons.svg/symbol-defs.svg#icon-mail"
+                      ></use>
+                    </svg>
+                    barbershop@email.com</a
+                  >
+                </li>
+              </ul>
+            </address>
             <div class="work-time">
-                <p class="work-time__sub-title sub-title">ГРАФІК РОБОТИ</p>
-                <p class="work-time__text text">Щоденно з 9:00 до 22:00</p>
+              <p class="work-time__sub-title sub-title" data-aos="zoom-in-down">
+                ГРАФІК РОБОТИ
+              </p>
+              <p class="work-time__text text">Щоденно з 9:00 до 22:00</p>
             </div>
+          </div>
         </div>
       </section>
     </main>
     <!-- Footer -->
     <footer class="footer">
-      <div class="container">
+      <div class="container footer__container">
         <p class="footer__copy">&copy;Copyright 2020</p>
-        <div class="footer__social">
-            <ul class="social__list">
-            <li class="social__item">
-                <a
+        <div class="footer-social">
+          <ul class="footer-social__list">
+            <li class="footer-social__item">
+              <a
                 href="https://www.instagram.com"
                 target="_blank"
                 rel="noopener nofollow noreferrer"
-                class="social__link"
+                class="footer-social__link social__link"
                 >Instagram</a
-                >
+              >
             </li>
-            <li class="social__item">
-                <a
+            <li class="footer-social__item">
+              <a
                 href="https://www.youtube.com"
                 target="_blank"
                 rel="noopener nofollow noreferrer"
-                class="social__link"
+                class="footer-social__link social__link"
                 >Youtube</a
-                >
+              >
             </li>
-            </ul>
+          </ul>
         </div>
       </div>
     </footer>
+    <!-- Backdrop -->
+    <div class="backdrop" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-button-close" data-modal-close>
+          <svg width="18px" height="18px">
+            <use
+              href="./images/icons.svg/symbol-defs.svg#icon-modal-close"
+            ></use>
+          </svg>
+        </button>
+        <p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modall__form">
+          <label class="modal__label"
+            >Ім'я
+            <input
+              required
+              type="text"
+              name="use-name"
+              class="modal__input"
+              placeholder="Іван Іванов"
+              minlength="2"
+            />
+          </label>
+          <label class="modal__label"
+            >Телефон
+            <input
+              required
+              type="tel"
+              name="use-tel"
+              class="modal__input"
+              placeholder="+38(044)000-00-00"
+              pattern="[\+]\d{2}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}"
+              title="+38(044)000-00-00"
+            />
+          </label>
+          <div class="modal__field">
+            <label for="use-email" class="modal__label">Пошта</label>
+            <input
+              required
+              type="tel"
+              name="use-email"
+              class="modal__input"
+              placeholder="ivanivanov@gmail.com"
+              id="use-email"
+            />
+          </div>
+          <div class="modal__field">
+            <label for="user-text" class="modal__label">Ваш коментр</label>
+             <textarea
+              name="user-text"
+              id="user-text"
+              placeholder="Введіть текст"
+              class="modal__text"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="button modul__button">Відправити</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Скрипт Анімацій -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Запуск Скрипт Анімацій -->
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
