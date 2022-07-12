@@ -519,6 +519,51 @@
         <div class="container online__container">
           <div class="subscribe">
             <h2 class="subscribe__title title">Онлайн-запис</h2>
+            <form class="subscribe__form">
+              <div class="subscribe__input-field">
+                <input
+                  type="text"
+                  class="subscribe__input"
+                  name="subscribe-name"
+                  id="subscribe-name"
+                  placeholder=" "
+                />
+                <label for="subscribe-name" class="subscribe__label"
+                  >Ім'я*</label
+                >
+              </div>
+              <div class="subscribe__input-field">
+                <input
+                  type="tel"
+                  class="subscribe__input"
+                  name="subscribe-tel"
+                  id="subscribe-tel"
+                  placeholder=" "
+                />
+                <label for="subscribe-tel" class="subscribe__label"
+                  >Телефон*</label
+                >
+              </div>
+              <div class="subscribe__mess-field">
+                <textarea
+                  type="mess"
+                  class="subscribe__mess subscribe__input"
+                  name="subscribe-mess"
+                  id="subscribe-mess"
+                  placeholder=" "
+                ></textarea>
+                <label for="subscribe-mess" class="subscribe__label"
+                  >Повідомлення</label
+                >
+              </div>
+              <button
+                type="submit"
+                class="subscribe__button button"
+                data-modal-open
+              >
+                отправить
+              </button>
+            </form>
           </div>
           <div class="address" id="address">
             <h2 class="address__title title">Контакти</h2>
@@ -607,7 +652,7 @@
       </div>
     </footer>
     <!-- Backdrop -->
-    <div class="backdrop" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal-button-close" data-modal-close>
           <svg width="18px" height="18px">
@@ -618,48 +663,84 @@
         </button>
         <p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
         <form class="modall__form">
-          <label class="modal__label"
-            >Ім'я
-            <input
-              required
-              type="text"
-              name="use-name"
-              class="modal__input"
-              placeholder="Іван Іванов"
-              minlength="2"
-            />
-          </label>
-          <label class="modal__label"
-            >Телефон
-            <input
-              required
-              type="tel"
-              name="use-tel"
-              class="modal__input"
-              placeholder="+38(044)000-00-00"
-              pattern="[\+]\d{2}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}"
-              title="+38(044)000-00-00"
-            />
-          </label>
           <div class="modal__field">
-            <label for="use-email" class="modal__label">Пошта</label>
-            <input
-              required
-              type="tel"
-              name="use-email"
-              class="modal__input"
-              placeholder="ivanivanov@gmail.com"
-              id="use-email"
-            />
+            <label for="use-name" class="modal__label">Ім'я</label>
+            <div class="modal__input-wrap">
+              <input
+                required
+                type="text"
+                name="use-name"
+                class="modal__input"
+                placeholder="Іван Іванов"
+                id="use-name"
+                minlength="2"
+              />
+              <svg class="modal__icon" width="18px" height="18px">
+                <use
+                  href="./images/icons.svg/symbol-defs.svg#icon-person"
+                ></use>
+              </svg>
+            </div>
           </div>
           <div class="modal__field">
-            <label for="user-text" class="modal__label">Ваш коментр</label>
-             <textarea
+            <label for="use-tel" class="modal__label">Телефон</label>
+            <div class="modal__input-wrap">
+              <input
+                required
+                type="tel"
+                name="use-tel"
+                class="modal__input"
+                placeholder="+38(044)000-00-00"
+                id="use-tel"
+                pattern="[\+]\d{2}[\(]\d{3}[\)]\d{3}[\-]\d{2}[\-]\d{2}"
+                title="+38(044)000-00-00"
+              />
+              <svg class="modal__icon" width="18px" height="18px">
+                <use href="./images/icons.svg/symbol-defs.svg#icon-phone"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__field">
+            <label for="use-email" class="modal__label">Пошта</label>
+            <div class="modal__input-wrap">
+              <input
+                required
+                type="email"
+                name="use-email"
+                class="modal__input"
+                placeholder="ivanivanov@gmail.com"
+                id="use-email"
+              />
+              <svg class="modal__icon" width="18px" height="18px">
+                <use href="./images/icons.svg/symbol-defs.svg#icon-email"></use>
+              </svg>
+            </div>
+          </div>
+          <div class="modal__field">
+            <label for="user-text" class="modal__label">Ваш коментар</label>
+            <textarea
               name="user-text"
               id="user-text"
               placeholder="Введіть текст"
-              class="modal__text"
+              class="modal__textarea"
             ></textarea>
+          </div>
+          <div class="modal-checkbox">
+            <input
+              required
+              class="modal-checkbox__input visually-hidden"
+              type="checkbox"
+              name="privacy"
+              value="true"
+              id="privacy"
+            />
+            <!-- <span class="modal-checkbox__icon"></span> -->
+            <label for="privacy" class="modal-checkbox__label"
+              ><span class="modal-checkbox__text"
+                >Погоджуюся з розсилкою та приймаю
+                <a href="" class="modal-checkbox__contract"> Умови договору</a>
+              </span>
+            </label>
           </div>
 
           <button type="submit" class="button modul__button">Відправити</button>
